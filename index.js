@@ -11,7 +11,7 @@ var T = new Twit({
   access_token_secret: access_token_secret,
 });
 
-var users = [];
+var users = ['937000244650192897', '927245875751112704', '2292889800', '4180733653', '70345946', '875402720643043336', '1344064868', '1668100142', '2735246778', '14675801', '517021184', '285019665', '3013204853', '408006225', '4229278887'];
 var stream = T.stream('statuses/filter', {follow: users});
 stream.on('tweet', (tweet) => {
   if (users.indexOf(tweet.user.id_str) > -1) {
